@@ -240,3 +240,4 @@ Pick one engine adapter and wire it end-to-end.
 Deploy a PoC where a user clicks ‘scan’ and sees results.
 
 If you can’t do that in 1 week, this idea is currently too big — break it into a smaller landing-page with signup + one engine PoC.
+
