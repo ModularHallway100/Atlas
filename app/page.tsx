@@ -25,8 +25,14 @@ export default async function LandingPage() {
                     <span className="font-bold text-xl tracking-tighter text-white">ATLAS</span>
                 </Link>
                 <nav className="ml-auto flex items-center gap-6">
+                    <Link className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground hover:text-primary transition-colors hidden sm:block" href="#how-it-works">
+                        How it works
+                    </Link>
                     <Link className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground hover:text-primary transition-colors hidden sm:block" href="#features">
                         Features
+                    </Link>
+                    <Link className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground hover:text-primary transition-colors hidden sm:block" href="#security">
+                        Security
                     </Link>
                     <Link className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground hover:text-primary transition-colors hidden sm:block" href="#pricing">
                         Pricing
@@ -52,13 +58,17 @@ export default async function LandingPage() {
                     <ProblemSolution />
                 </div>
 
-                <HowItWorks />
+                <div id="how-it-works">
+                    <HowItWorks />
+                </div>
 
                 <div id="features">
                     <FeaturesGrid />
                 </div>
 
-                <Testimonials />
+                <div id="security">
+                    <Testimonials />
+                </div>
 
                 {/* Final Call to Action Section */}
                 <section className="py-32 bg-[#0B0E14] relative overflow-hidden border-t border-border/40">

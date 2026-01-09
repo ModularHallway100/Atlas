@@ -33,12 +33,19 @@ export function Hero({ isLoggedIn }: { isLoggedIn: boolean }) {
                         </div>
 
                         <div className="flex flex-col items-center gap-6 animate-in fade-in slide-in-from-bottom duration-1000 delay-300">
-                            <Button asChild size="lg" className="h-16 px-12 rounded-full text-xl font-black bg-primary text-white hover:bg-primary/90 shadow-[0_0_40px_rgba(59,130,246,0.3)] transition-all glow-hover">
-                                <Link href={isLoggedIn ? "/dashboard" : "/auth"}>
-                                    {isLoggedIn ? "Go to Dashboard" : "Run Your First Scan"}
-                                    <ArrowRight className="ml-3 h-6 w-6" />
-                                </Link>
-                            </Button>
+                            <div className="flex flex-wrap items-center justify-center gap-4">
+                                <Button asChild size="lg" className="h-16 px-12 rounded-full text-xl font-black bg-primary text-white hover:bg-primary/90 shadow-[0_0_40px_rgba(59,130,246,0.3)] transition-all glow-hover">
+                                    <Link href={isLoggedIn ? "/dashboard" : "/auth"}>
+                                        {isLoggedIn ? "Go to Dashboard" : "Run Your First Scan"}
+                                        <ArrowRight className="ml-3 h-6 w-6" />
+                                    </Link>
+                                </Button>
+                                <Button asChild variant="outline" size="lg" className="h-16 px-8 rounded-full text-lg font-bold border-white/20 hover:bg-white/5 transition-colors">
+                                    <Link href="/sample-report">
+                                        View Sample Report
+                                    </Link>
+                                </Button>
+                            </div>
                             <p className="text-[10px] font-black text-muted-foreground uppercase tracking-[0.3em]">
                                 No credit card. Takes 2 minutes.
                             </p>

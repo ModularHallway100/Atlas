@@ -13,20 +13,20 @@ import Link from "next/link";
 export function PricingFAQ() {
     const faqs = [
         {
-            q: "Is this a replacement for security tools?",
-            a: "No. ATLAS orchestrates and unifies them. You still get best-in-class engines (Metlo, Akto, etc.), but with a single control plane and normalized results.",
+            q: "Is this a replacement for existing security tools?",
+            a: "No. ATLAS is an orchestration layer. It complements tools like Metlo and Akto by unifying their outputs into a single schema, deduplicating findings, and providing a unified risk score so your team can focus on remediation instead of triage.",
         },
         {
             q: "Do you run scans against production APIs?",
-            a: "Yes, safely. You control the targets, authentication methods, and engine selection. We recommend staging/dev for destructive engines (like fuzzers).",
+            a: "ATLAS can be target-agnostic, but we recommend running aggressive engines (like Akto's fuzzers) against staging or dev environments. You can configure specific 'Safe Mode' engines for production observability.",
         },
         {
-            q: "How is this different from a vulnerability scanner?",
-            a: "A typical scanner runs one engine. ATLAS is an orchestration layer that runs multiple engines simultaneously and normalizes their conflicting outputs into one report.",
+            q: "How does the orchestration actually work?",
+            a: "When you trigger a scan, ATLAS dispatches jobs to isolated engine instances. We ingest raw JSON/YAML outputs, normalize them against our Unified Risk Schema, and use attribution logic to show exactly which engine found which vulnerability.",
         },
         {
-            q: "Is my data secure?",
-            a: "Absolutely. Each scan runs in an isolated environment. Your credentials are encrypted and never stored in plain text. We do not retain cross-tenant access.",
+            q: "Is my data and API access secure?",
+            a: "Security is our core product. All scan engines run in ephemeral, hardware-isolated containers. API keys and credentials are encrypted at rest using AES-256 and are only injected into the engine runtime for the duration of the scan.",
         },
     ];
 
@@ -48,10 +48,10 @@ export function PricingFAQ() {
                             </div>
                             <ul className="space-y-4 mb-8">
                                 {[
-                                    "1 Active Project",
-                                    "Limited scans per month",
+                                    "1 Project / 5 Scans per month",
                                     "Metlo, Akto, PentestGPT included",
                                     "Standard Unified Report",
+                                    "Unlimited findings search",
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-center gap-3 text-sm">
                                         <Check className="h-4 w-4 text-success" />

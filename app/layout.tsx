@@ -6,8 +6,8 @@ import { cn } from "@/lib/utils";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "ATLAS | API Security Intelligence",
-    description: "The orchestration layer for API security intelligence.",
+    title: "ATLAS | API Security Orchestration for Modern Engineering",
+    description: "Run Metlo, Akto, and PentestGPT in one place. Normalize findings into a single risk report in minutes. Start free.",
 };
 
 export default function RootLayout({

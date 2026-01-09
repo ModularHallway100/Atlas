@@ -22,9 +22,10 @@ export function Footer() {
                     <div className="space-y-4">
                         <h4 className="text-xs font-black uppercase tracking-widest text-muted-foreground">Product</h4>
                         <ul className="space-y-2 text-sm font-medium">
-                            <li><Link href="/auth" className="hover:text-primary transition-colors">SignIn</Link></li>
-                            <li><Link href="/auth" className="hover:text-primary transition-colors">Get Started</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Documentation</Link></li>
+                            <li><Link href="/auth" className="hover:text-primary transition-colors">Sign In</Link></li>
+                            <li><Link href="#how-it-works" className="hover:text-primary transition-colors">How it works</Link></li>
+                            <li><Link href="#security" className="hover:text-primary transition-colors">Security</Link></li>
+                            <li><Link href="/docs" className="hover:text-primary transition-colors">Documentation</Link></li>
                         </ul>
                     </div>
 
@@ -33,6 +34,7 @@ export function Footer() {
                         <ul className="space-y-2 text-sm font-medium">
                             <li><Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
                             <li><Link href="#" className="hover:text-primary transition-colors">Terms of Service</Link></li>
+                            <li><Link href="#oss-credits" className="hover:text-primary transition-colors">Open Source Credits</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -42,9 +44,9 @@ export function Footer() {
                         © 2025 ATLAS Security Orchestration. All rights reserved.
                     </p>
                     <div className="flex items-center gap-6">
-                        <Link href="https://github.com" className="text-muted-foreground hover:text-white transition-colors"><Github className="h-5 w-5" /></Link>
-                        <Link href="https://twitter.com" className="text-muted-foreground hover:text-white transition-colors"><Twitter className="h-5 w-5" /></Link>
-                        <Link href="https://linkedin.com" className="text-muted-foreground hover:text-white transition-colors"><Linkedin className="h-5 w-5" /></Link>
+                        <Link href="https://github.com/ModularHallway100/Atlas" aria-label="ATLAS GitHub" className="text-muted-foreground hover:text-white transition-colors"><Github className="h-5 w-5" /></Link>
+                        <Link href="https://twitter.com" aria-label="ATLAS Twitter" className="text-muted-foreground hover:text-white transition-colors"><Twitter className="h-5 w-5" /></Link>
+                        <Link href="https://linkedin.com" aria-label="ATLAS LinkedIn" className="text-muted-foreground hover:text-white transition-colors"><Linkedin className="h-5 w-5" /></Link>
                     </div>
                 </div>
             </div>

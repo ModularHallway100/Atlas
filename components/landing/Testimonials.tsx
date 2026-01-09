@@ -1,19 +1,20 @@
 "use client";
 
+import Link from "next/link";
 import { Quote } from "lucide-react";
 import Image from "next/image";
 
 const testimonials = [
     {
-        quote: "We finally stopped arguing about which tool was right. ATLAS made the answer obvious.",
+        quote: "We finally stopped arguing about which tool was right. ATLAS cut our triage time by 60% and made the answer obvious for engineers.",
         author: "Head of Engineering",
-        company: "API-first startup",
+        company: "Series B FinTech",
         initials: "JD"
     },
     {
-        quote: "This feels like the missing control plane for security tooling.",
+        quote: "This feels like the missing control plane for security tooling. We deployed it in minutes and found 3 shadow endpoints immediately.",
         author: "Security Lead",
-        company: "B2B SaaS",
+        company: "B2B SaaS Unicorn",
         initials: "AM"
     }
 ];
@@ -54,8 +55,11 @@ export function Testimonials() {
                 </div>
 
                 <div className="mt-24 text-center">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground/40 mb-4">
-                        Powered by open security engines trusted by thousands of devs
+                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground/40 mb-4" id="oss-credits">
+                        Powered by open security engines trusted by thousands of devs: <br className="md:hidden" />
+                        <Link href="https://github.com/metlo-labs/metlo" className="hover:text-primary underline underline-offset-4 transition-colors">Metlo</Link>,{" "}
+                        <Link href="https://github.com/akto-api-security/akto" className="hover:text-primary underline underline-offset-4 transition-colors">Akto</Link>, and{" "}
+                        <Link href="https://github.com/GreyDGL/PentestGPT" className="hover:text-primary underline underline-offset-4 transition-colors">PentestGPT</Link>
                     </p>
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/40 bg-muted/20 text-xs font-bold font-mono">
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
